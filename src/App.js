@@ -4,6 +4,7 @@ import React from 'react';
 import Customerlist from './components/Customerlist';
 import Traininglist from './components/Trainiglist';
 import Home from './components/Home';
+import Calendarpage from './components/Calendarpage';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -14,7 +15,7 @@ function App() {
 
       <Router>
         <AppBar position="static">
-          
+
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link to="/">HOME</Link>
@@ -25,23 +26,30 @@ function App() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               <Link to="/traininglist">TRAININGS</Link>
             </Typography>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Link to="/calendar">CALENDAR</Link>
+            </Typography>
+
           </Toolbar>
         </AppBar>
 
         <Switch>
           <Route exact path="/">
-          <Home />
+            <Home />
           </Route>
           <Route path="/customerlist">
-          <Customerlist />
+            <Customerlist />
           </Route>
           <Route path="/traininglist">
-          <Traininglist />
+            <Traininglist />
+          </Route>
+          <Route path="/calendar">
+            <Calendarpage />
           </Route>
         </Switch>
 
       </Router>
-    </div>
+    </div >
   );
 }
 

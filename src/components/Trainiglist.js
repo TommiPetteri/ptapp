@@ -3,7 +3,7 @@ import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import moment from 'moment';
+//import moment from 'moment';
 
 
 export default function Traininglist() {
@@ -15,7 +15,7 @@ export default function Traininglist() {
         fetch('https://customerrest.herokuapp.com/gettrainings')
             .then(response => response.json())
             .then(data => setTrainings(data))
-            
+
     }
 
     const deleteTraining = (id) => {
@@ -25,7 +25,7 @@ export default function Traininglist() {
                 .catch(err => console.error(err))
     }
 
-    console.log(moment(trainings[0].date).format('DD-MM-YYYY h:mm'))
+    //console.log(moment(trainings[0].date).format('DD-MM-YYYY h:mm'))
 
     const columns = [
         {
@@ -35,6 +35,7 @@ export default function Traininglist() {
         {
             Header: 'Date',
             accessor: 'date',
+
         },
         {
             Header: 'Duration',
