@@ -5,7 +5,6 @@ import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 //import moment from 'moment';
 
-
 export default function Traininglist() {
     const [trainings, setTrainings] = useState([]);
 
