@@ -112,7 +112,7 @@ export default function Customerlist() {
     return (
         <div>
             <Addcustomer saveCustomer={saveCustomer}/>
-            <ReactTable filterable={true} data={customers} columns={columns} />
+            <ReactTable filterable={true} data={customers} columns={columns}/>
         </div>
     );
 }

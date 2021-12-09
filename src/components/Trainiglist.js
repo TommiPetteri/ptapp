@@ -3,7 +3,7 @@ import ReactTable from 'react-table';
 import 'react-table/react-table.css';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-//import moment from 'moment';
+import moment from 'moment';
 
 export default function Traininglist() {
     const [trainings, setTrainings] = useState([]);
@@ -34,6 +34,12 @@ export default function Traininglist() {
         {
             Header: 'Date',
             accessor: 'date',
+            Cell : (props)=>{
+                //props.value will contain your date
+                //you can convert your date here
+                const custom_date = moment(props.value).format('DD-MM-YYYY h:mm')
+                return <span>{custom_date}</span>
+            }
 
         },
         {
@@ -61,7 +67,7 @@ export default function Traininglist() {
 
     return (
         <div>
-            <ReactTable filterable={true} data={trainings} columns={columns} />
+            <ReactTable filterable={true} data={trainings}  columns={columns} />
         </div>
     );
 }
