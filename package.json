@@ -13,10 +13,12 @@
     "@material/icon-button": "^13.0.0",
     "@mui/icons-material": "^5.2.1",
     "@mui/material": "^5.2.2",
+    "@szhsin/react-menu": "^2.3.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "date-fns": "^2.27.0",
+    "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "react": "^17.0.2",
     "react-big-calendar": "^0.38.1",
@@ -24,9 +26,11 @@
     "react-datetime": "^3.1.1",
     "react-datetime-picker": "^3.4.3",
     "react-dom": "^17.0.2",
+    "react-linechart": "^1.1.12",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-table": "^6.10.3",
+    "recharts": "^2.1.6",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -53,5 +57,4 @@
       "last 1 safari version"
     ]
   }
-
 }

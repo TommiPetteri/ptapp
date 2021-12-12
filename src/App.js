@@ -5,9 +5,11 @@ import Customerlist from './components/Customerlist';
 import Traininglist from './components/Trainiglist';
 import Home from './components/Home';
 import Calendarpage from './components/Calendarpage';
+import Statics from './components/Statics'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import MenuItem from '@mui/material/MenuItem';
 
 function App() {
   return (
@@ -15,21 +17,23 @@ function App() {
 
       <Router>
         <AppBar position="static">
-
           <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link to="/">HOME</Link>
-            </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link to="/customerlist">CUSTOMERS</Link>
-            </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link to="/traininglist">TRAININGS</Link>
-            </Typography>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Link to="/calendar">CALENDAR</Link>
-            </Typography>
-
+        
+            <MenuItem component={Link} to='/'>
+              PT-APP
+            </MenuItem>
+            <MenuItem component={Link} to='/customerlist'>
+              Customer
+            </MenuItem>
+            <MenuItem component={Link} to='/traininglist'>
+              Trainings
+            </MenuItem>
+            <MenuItem component={Link} to='/calendar'>
+              Calendar
+            </MenuItem>
+            <MenuItem component={Link} to='/statics'>
+              Statics
+            </MenuItem>
           </Toolbar>
         </AppBar>
 
@@ -45,6 +49,9 @@ function App() {
           </Route>
           <Route path="/calendar">
             <Calendarpage />
+          </Route>
+          <Route path="/statics">
+            <Statics />
           </Route>
         </Switch>
 

@@ -24,8 +24,6 @@ export default function Traininglist() {
                 .catch(err => console.error(err))
     }
 
-    //console.log(moment(trainings[0].date).format('DD-MM-YYYY h:mm'))
-
     const columns = [
         {
             Header: 'Activity',
@@ -35,8 +33,6 @@ export default function Traininglist() {
             Header: 'Date',
             accessor: 'date',
             Cell : (props)=>{
-                //props.value will contain your date
-                //you can convert your date here
                 const custom_date = moment(props.value).format('DD-MM-YYYY h:mm')
                 return <span>{custom_date}</span>
             }

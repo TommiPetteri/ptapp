@@ -24,10 +24,11 @@ export default function Calendarpage() {
         {
             allDay: 'false',
             title: 
-            moment(training.date).format('h:mm') + 
-            "/" + training.duration + 
+            moment(training.date).format('h:mm') +
+            "/ " + training.duration + 
             "min  "  + 
-            training.activity,
+            training.activity + "/ " +
+            training.customer.lastname,
 
             start: moment(training.date).toDate(),
             end: moment(training.date).add(training.duration, 'minutes').toDate(),

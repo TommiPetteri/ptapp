@@ -6,8 +6,6 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 
-
-
 export default function Addtraining(props) {
 
     const [open, setOpen] = React.useState(false);
@@ -69,7 +67,6 @@ export default function Addtraining(props) {
                         fullWidth
                         variant="standard"
                     />
-
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
